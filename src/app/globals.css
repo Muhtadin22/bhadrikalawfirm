@@ -1,18 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-  /* Skema Warna Kustom Kantor Hukum */
   --color-navy: #0A192F;
   --color-gold: #D4AF37;
   --color-lightgold: #F3E5AB;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #ffffff;
   color: #1f2937;
-}
-
-/* Memperhalus scroll saat klik tombol CTA */
-html {
-  scroll-behavior: smooth;
 }

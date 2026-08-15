@@ -1,9 +1,13 @@
 import React from 'react';
+import Navbar from '../components/Navbar';
 
 export default function LandingPage() {
   return (
     <main className="font-sans text-gray-800">
       
+      {/* NAVBAR */}
+      <Navbar />
+
       {/* 1. HERO SECTION */}
       <section className="bg-navy text-white px-6 py-24 md:py-32 flex flex-col items-center text-center">
         <div className="max-w-4xl">
@@ -13,7 +17,7 @@ export default function LandingPage() {
           <h2 className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
             Firma Hukum Nusantara & Partners mendampingi pemilik bisnis dan individu di Jakarta menyelesaikan sengketa dan urusan hukum dengan strategi tepat, aman, dan rahasia.
           </h2>
-          <a href="#contact" className="bg-gold text-navy font-bold py-4 px-8 rounded-md text-lg hover:bg-lightgold transition duration-300 shadow-lg inline-block">
+          <a href="#kontak" className="bg-gold text-navy font-bold py-4 px-8 rounded-md text-lg hover:bg-lightgold transition duration-300 shadow-lg inline-block">
             Konsultasi Kasus Anda via WhatsApp
           </a>
         </div>
@@ -47,22 +51,19 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* 4. PRACTICE AREAS */}
-      <section className="py-20 bg-white px-6">
+      {/* 4. PRACTICE AREAS (Layanan) */}
+      <section id="layanan" className="py-20 bg-white px-6 scroll-mt-16">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-navy mb-12 text-center">Layanan Hukum Kami</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Card 1 */}
             <div className="bg-navy p-8 rounded-lg shadow-lg border-t-4 border-gold transition hover:-translate-y-1 hover:shadow-xl duration-300">
               <h3 className="text-xl font-bold text-gold mb-4">Sengketa Bisnis</h3>
               <p className="text-gray-300">Menyelesaikan konflik antar pemegang saham, pelanggaran kontrak, dan sengketa komersial dengan fokus pada efisiensi dan win-win solution.</p>
             </div>
-            {/* Card 2 */}
             <div className="bg-navy p-8 rounded-lg shadow-lg border-t-4 border-gold transition hover:-translate-y-1 hover:shadow-xl duration-300">
               <h3 className="text-xl font-bold text-gold mb-4">Hukum Perusahaan</h3>
               <p className="text-gray-300">Pendampingan legalitas, merger & akuisisi, serta kepatuhan hukum untuk memastikan bisnis Anda bertumbuh tanpa risiko legal.</p>
             </div>
-            {/* Card 3 */}
             <div className="bg-navy p-8 rounded-lg shadow-lg border-t-4 border-gold transition hover:-translate-y-1 hover:shadow-xl duration-300">
               <h3 className="text-xl font-bold text-gold mb-4">Hukum Keluarga & Waris</h3>
               <p className="text-gray-300">Penanganan kasus perceraian, hak asuh anak, dan pembagian harta warisan dengan pendekatan yang empatik dan sangat rahasia.</p>
@@ -71,8 +72,8 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* 5. WHY CHOOSE US */}
-      <section className="py-20 bg-gray-50 px-6">
+      {/* 5. WHY CHOOSE US (Keunggulan) */}
+      <section id="keunggulan" className="py-20 bg-gray-50 px-6 scroll-mt-16">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-navy mb-10 text-center">Mengapa Memilih Nusantara & Partners?</h2>
           <div className="space-y-6">
@@ -101,8 +102,8 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* 6. OUR TEAM */}
-      <section className="py-20 bg-white px-6">
+      {/* 6. OUR TEAM (Tentang Kami) */}
+      <section id="tentang" className="py-20 bg-white px-6 scroll-mt-16">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
           <div className="w-full md:w-1/3 h-80 bg-gray-100 rounded-lg flex items-center justify-center border-b-8 border-gold overflow-hidden">
             <div className="text-gray-400 font-medium text-center p-4">
@@ -122,8 +123,8 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* 7. TESTIMONIALS */}
-      <section className="py-20 bg-navy px-6">
+      {/* 7. TESTIMONIALS (Testimoni) */}
+      <section id="testimoni" className="py-20 bg-navy px-6 scroll-mt-16">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-12">Kepercayaan Klien Kami</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -139,8 +140,8 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* 8. FINAL CTA & FORM */}
-      <section id="contact" className="py-24 bg-gray-50 px-6">
+      {/* 8. FINAL CTA & FORM (Kontak) */}
+      <section id="kontak" className="py-24 bg-gray-50 px-6 scroll-mt-16">
         <div className="max-w-3xl mx-auto">
           <div className="bg-white p-10 rounded-xl shadow-xl border-t-8 border-gold">
             <h2 className="text-3xl font-bold text-navy mb-4 text-center">Jangan Tunda Solusi Hukum Anda.</h2>
