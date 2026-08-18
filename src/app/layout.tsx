@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 // Pengaturan Metadata SEO untuk Google dan Mesin Pencari
 export const metadata: Metadata = {
-  title: "Firma Hukum Nusantara & Partners | Attorneys at Law",
+  title: "Firma Hukum Abil Law Firm | Attorneys at Law",
   description: "Firma hukum korporat dan privat tingkat atas di Jakarta, berdedikasi memberikan perlindungan aset, mitigasi risiko, dan penyelesaian sengketa dengan kerahasiaan absolut.",
   keywords: "pengacara jakarta, firma hukum korporat, sengketa bisnis, hukum keluarga, advokat indonesia, nusantara partners",
 };
