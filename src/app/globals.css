@@ -1,9 +1,13 @@
 @import "tailwindcss";
 
 @theme {
-  --color-navy: #0A192F;
-  --color-gold: #D4AF37;
-  --color-lightgold: #F3E5AB;
+  /* Tema Deep Navy + Metallic Gold (Premium Law Firm) */
+  --color-navy-deep: #0B1628;       /* Background Footer, Hero, & Elemen Gelap Utama */
+  --color-navy: #13233A;            /* Kartu Testimoni & Elemen Gelap Sekunder */
+  --color-gold-metallic: #C8A951;   /* Aksen Utama, Tombol, Garis, Ikon */
+  --color-gold-soft: #E8D69B;       /* Gradasi Terang untuk Emas & Hover */
+  --color-off-white: #F7F7F5;       /* Background Halaman Utama (Pengganti Putih Polos agar lebih elegan) */
+  --color-charcoal: #111111;        /* Teks Utama pada Background Terang */
 }
 
 html {
@@ -11,6 +15,7 @@ html {
 }
 
 body {
-  background-color: #ffffff;
-  color: #1f2937;
+  /* Menggunakan Off White agar mata lebih nyaman dan berkesan kertas dokumen premium */
+  background-color: var(--color-off-white);
+  color: var(--color-charcoal);
 }
