@@ -43,7 +43,7 @@ export default function LayananPage() {
       <section className="relative bg-navy-deep pt-28 pb-36 px-6 text-center overflow-hidden border-b-8 border-gold-metallic">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10 mix-blend-overlay"></div>
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gold-metallic/10 rounded-full blur-[140px] -translate-y-1/3 translate-x-1/4"></div>
-        
+
         <div className="relative z-10 max-w-4xl mx-auto">
           <div className="mb-4 inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gold-metallic/30 bg-gold-metallic/5 text-gold-metallic text-xs font-bold tracking-widest uppercase">
             Cakupan Layanan Hukum
@@ -117,8 +117,8 @@ export default function LayananPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {practiceAreas.map((area, index) => (
-              <Link 
-                key={index} 
+              <Link
+                key={index}
                 href={`/layanan/detail?area=${encodeURIComponent(area.toLowerCase().replace(/[\s/]+/g, '-'))}`}
                 className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:border-gold-metallic hover:shadow-md transition-all flex items-center justify-between group"
               >
@@ -150,38 +150,7 @@ export default function LayananPage() {
       </section>
 
       {/* 5. FOOTER */}
-      <footer className="bg-[#08101E] pt-16 pb-8 px-6 border-t border-gold-metallic/20 mt-auto">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
-          <div className="md:col-span-2">
-            <Link href="/" className="text-2xl font-bold text-white tracking-wide mb-4 block">
-              Bhadrika Byakta <span className="text-gold-metallic">Law Firm</span>
-            </Link>
-            <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
-              Firma hukum kelas atas yang berdedikasi memberikan solusi perlindungan aset dan penyelesaian sengketa dengan standar kerahasiaan dan profesionalisme internasional.
-            </p>
-          </div>
-          <div>
-            <h4 className="text-white font-bold mb-4 uppercase tracking-widest text-sm">Navigasi</h4>
-            <ul className="space-y-2 text-sm text-gray-400">
-              <li><Link href="/layanan" className="hover:text-gold-metallic transition">Area Praktik</Link></li>
-              <li><Link href="/tentang" className="hover:text-gold-metallic transition">Profil Advokat</Link></li>
-              <li><Link href="/awards" className="hover:text-gold-metallic transition">Penghargaan</Link></li>
-              <li><Link href="/kontak" className="hover:text-gold-metallic transition">Kontak & Lokasi</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-white font-bold mb-4 uppercase tracking-widest text-sm">Informasi Legal</h4>
-            <ul className="space-y-2 text-sm text-gray-400">
-              <li><Link href="#" className="hover:text-gold-metallic transition">Kebijakan Privasi</Link></li>
-              <li><Link href="#" className="hover:text-gold-metallic transition">Syarat & Ketentuan</Link></li>
-              <li><Link href="#" className="hover:text-gold-metallic transition">Disclaimer Hukum</Link></li>
-            </ul>
-          </div>
-        </div>
-        <div className="max-w-6xl mx-auto text-center border-t border-white/10 pt-8 text-gray-500 text-sm">
-          &copy; {new Date().getFullYear()} Bhadrika Byakta Law Firm. Seluruh hak cipta dilindungi undang-undang.
-        </div>
-      </footer>
+
     </main>
   );
 }
