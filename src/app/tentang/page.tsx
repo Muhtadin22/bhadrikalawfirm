@@ -213,7 +213,39 @@ export default function TentangPage() {
         </div>
       </section>
 
-
+      {/* 7. FOOTER */}
+      <footer className="bg-[#08101E] pt-16 pb-8 px-6 border-t border-gold-metallic/20 mt-auto">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+          <div className="md:col-span-2">
+            <Link href="/" className="text-2xl font-bold text-white tracking-wide mb-4 block">
+              Bhadrika Byakta <span className="text-gold-metallic">Law Firm</span>
+            </Link>
+            <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
+              Firma hukum kelas atas yang berdedikasi memberikan solusi perlindungan aset dan penyelesaian sengketa dengan standar kerahasiaan dan profesionalisme internasional.
+            </p>
+          </div>
+          <div>
+            <h4 className="text-white font-bold mb-4 uppercase tracking-widest text-sm">Navigasi</h4>
+            <ul className="space-y-2 text-sm text-gray-400">
+              <li><Link href="/layanan" className="hover:text-gold-metallic transition">Area Praktik</Link></li>
+              <li><Link href="/tentang" className="hover:text-gold-metallic transition">Profil Advokat</Link></li>
+              <li><Link href="/awards" className="hover:text-gold-metallic transition">Penghargaan</Link></li>
+              <li><Link href="/kontak" className="hover:text-gold-metallic transition">Kontak & Lokasi</Link></li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="text-white font-bold mb-4 uppercase tracking-widest text-sm">Informasi Legal</h4>
+            <ul className="space-y-2 text-sm text-gray-400">
+              <li><Link href="#" className="hover:text-gold-metallic transition">Kebijakan Privasi</Link></li>
+              <li><Link href="#" className="hover:text-gold-metallic transition">Syarat & Ketentuan</Link></li>
+              <li><Link href="#" className="hover:text-gold-metallic transition">Disclaimer Hukum</Link></li>
+            </ul>
+          </div>
+        </div>
+        <div className="max-w-6xl mx-auto text-center border-t border-white/10 pt-8 text-gray-500 text-sm">
+          &copy; {new Date().getFullYear()} Bhadrika Byakta Law Firm. Seluruh hak cipta dilindungi undang-undang.
+        </div>
+      </footer>
     </main>
   );
 }
