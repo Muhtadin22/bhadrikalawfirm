@@ -309,6 +309,3 @@ export default function LandingPage() {
   );
 } 
 
-git add .
-git commit -m "fix: update konten halaman terbaru"
-git push origin main
