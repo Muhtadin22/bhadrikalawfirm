@@ -8,7 +8,7 @@ export default function LandingPage() {
       
       <Navbar />
 
-      {/* 1. HERO SECTION */}
+      {/* 1. HERO BANNER / HEADER UTAMA */}
       <section className="relative bg-gradient-to-b from-navy-deep to-navy text-white px-6 pt-24 pb-40 flex flex-col items-center text-center overflow-hidden">
         {/* Tekstur Subtle */}
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10 mix-blend-overlay"></div>
@@ -16,68 +16,204 @@ export default function LandingPage() {
         <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center">
           <div className="mb-6 inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gold-metallic/30 bg-gold-metallic/5 text-gold-soft text-sm font-semibold tracking-widest uppercase shadow-sm">
             <span className="w-2 h-2 rounded-full bg-gold-metallic animate-pulse"></span>
-            Firma Hukum Korporasi Jakarta
+            Hotline: +62 (21) 812-3456 / WhatsApp: +62 811-9876-5432
           </div>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-[1.15] mb-6 tracking-tight">
-            Melindungi Bisnis & Hak Anda dengan <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-metallic to-gold-soft">Kepastian Hukum</span>
+            BHADRIKA BYAKTA LAW FIRM <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-metallic to-gold-soft">Premium and Professional Legal Solutions in Indonesia</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed font-light">
-            Nusantara & Partners mendampingi pemilik bisnis dan individu menyelesaikan sengketa dengan strategi analisis tajam, aman, dan sangat rahasia.
+            Menghadirkan solusi hukum tingkat tinggi untuk korporasi dan individu dengan ketajaman analisis, integritas mutlak, dan perlindungan strategis.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link href="/kontak" className="bg-gradient-to-r from-gold-metallic to-gold-soft text-navy-deep font-bold py-4 px-10 rounded-md text-lg hover:shadow-[0_0_20px_rgba(200,169,81,0.4)] hover:-translate-y-1 transition-all duration-300">
-              Evaluasi Kasus Gratis
+            <Link href="/cases" className="bg-gradient-to-r from-gold-metallic to-gold-soft text-navy-deep font-bold py-4 px-10 rounded-md text-lg hover:shadow-[0_0_20px_rgba(200,169,81,0.4)] hover:-translate-y-1 transition-all duration-300">
+              Read Our Cases
             </Link>
-            <Link href="/layanan" className="bg-transparent border border-gray-400 text-white font-medium py-4 px-10 rounded-md text-lg hover:bg-white/10 transition duration-300">
-              Pelajari Layanan
+            <Link href="/kontak" className="bg-transparent border border-gray-400 text-white font-medium py-4 px-10 rounded-md text-lg hover:bg-white/10 transition duration-300">
+              Contact Us
             </Link>
           </div>
         </div>
       </section>
 
-      {/* 2. TRUST INDICATORS (Statistik) */}
-      <section className="relative z-20 -mt-20 px-6 max-w-6xl mx-auto">
-        <div className="bg-white rounded-xl shadow-2xl border border-gray-200 p-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-gray-200">
-          <div className="p-4 hover:-translate-y-1 transition duration-300">
-            <h3 className="text-5xl font-extrabold text-navy-deep mb-2">15<span className="text-gold-metallic">+</span></h3>
-            <p className="text-charcoal/60 font-semibold uppercase tracking-widest text-sm">Tahun Pengalaman</p>
+      {/* 2. RECENT UPDATES / BANNER HIGHLIGHT PENGHARGAAN */}
+      <section className="relative z-20 -mt-16 px-6 max-w-5xl mx-auto mb-16">
+        <div className="bg-navy p-6 rounded-xl shadow-xl border border-gold-metallic/30 text-white flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="flex items-center gap-4">
+            <div className="w-12 h-12 bg-gold-metallic/20 border border-gold-metallic rounded-lg flex items-center justify-center flex-shrink-0 text-gold-metallic">
+              🏆
+            </div>
+            <div>
+              <span className="text-xs text-gold-metallic font-semibold tracking-widest uppercase">Penghargaan Terbaru</span>
+              <h4 className="text-lg font-bold">1st Place Largest Litigation Practice of the Year — Hukumonline & In-House Counsel Awards</h4>
+            </div>
           </div>
-          <div className="p-4 hover:-translate-y-1 transition duration-300">
-            <h3 className="text-5xl font-extrabold text-navy-deep mb-2">500<span className="text-gold-metallic">+</span></h3>
-            <p className="text-charcoal/60 font-semibold uppercase tracking-widest text-sm">Perkara Selesai</p>
-          </div>
-          <div className="p-4 hover:-translate-y-1 transition duration-300">
-            <h3 className="text-5xl font-extrabold text-navy-deep mb-2">98<span className="text-gold-metallic">%</span></h3>
-            <p className="text-charcoal/60 font-semibold uppercase tracking-widest text-sm">Tingkat Keberhasilan</p>
+          <Link href="/awards" className="text-xs font-bold uppercase tracking-wider text-gold-soft border-b border-gold-soft pb-1 hover:text-white transition">
+            Lihat Semua Penghargaan →
+          </Link>
+        </div>
+      </section>
+
+      {/* 3. QUICK ACCESS CARDS (AKSES CEPAT NAVIGATION) */}
+      <section className="px-6 max-w-6xl mx-auto mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {[
+            { title: "Legal Services", desc: "Eksplorasi 5 pilar layanan hukum utama kami.", link: "/layanan", icon: "⚖️" },
+            { title: "Our Lawyers", desc: "Kenali jajaran advokat & founding partner berpengalaman.", link: "/tentang", icon: "👥" },
+            { title: "Awards & Recognitions", desc: "Prestasi dan pengakuan institusional berskala nasional.", link: "/awards", icon: "🌟" },
+            { title: "About Us", desc: "Sejarah, visi integritas, & jangkauan klien global.", link: "/tentang", icon: "🏛️" },
+          ].map((card, idx) => (
+            <Link key={idx} href={card.link} className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md hover:border-gold-metallic transition-all group">
+              <div className="text-3xl mb-3">{card.icon}</div>
+              <h4 className="text-xl font-bold text-navy-deep group-hover:text-gold-metallic transition mb-2">{card.title}</h4>
+              <p className="text-sm text-charcoal/70">{card.desc}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* 4. INTRO PROFILE / TRUSTED PROFESSIONALS */}
+      <section className="py-20 bg-white px-6 border-y border-gray-200">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-sm text-gold-metallic font-bold tracking-widest uppercase mb-2">Tentang Kami</h2>
+          <h3 className="text-3xl md:text-4xl font-bold text-navy-deep mb-6">Berdiri Sejak 2011, Komitmen Tanpa Kompromi pada Integritas</h3>
+          <p className="text-charcoal/80 leading-relaxed text-lg max-w-3xl mx-auto mb-8">
+            Bhadrika Byakta Law Firm telah dipercaya oleh berbagai klien mulai dari individu berprofil tinggi, perusahaan nasional, hingga korporasi multinasional. Kami mendedikasikan standar keahlian tertinggi untuk memberikan kepastian dan keamanan hukum di setiap langkah bisnis Anda.
+          </p>
+          <div className="inline-flex gap-8 text-navy-deep font-semibold text-sm">
+            <span className="flex items-center gap-2">✓ 100% Confidentiality</span>
+            <span className="flex items-center gap-2">✓ Strategi Berbasis Riset</span>
+            <span className="flex items-center gap-2">✓ Standar Internasional</span>
           </div>
         </div>
       </section>
 
-      {/* 3. PRACTICE AREAS (Layanan) */}
-      <section className="py-24 px-6 mt-10">
+      {/* 5. SECTION LEGAL SERVICES (LAYANAN HUKUM UTAMA) */}
+      <section className="py-24 px-6 max-w-6xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-sm text-gold-metallic font-bold tracking-widest uppercase mb-2">Area Praktik</h2>
+          <h3 className="text-3xl md:text-4xl font-bold text-navy-deep">5 Pilar Layanan Hukum Utama</h3>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {[
+            { title: "Dispute Resolution & Arbitration", desc: "Penyelesaian sengketa komersial dan arbitrase domestik maupun internasional dengan pendekatan taktis." },
+            { title: "Litigation & Investigation", desc: "Pendampingan litigasi penuh di pengadilan serta investigasi hukum mendalam untuk memitigasi risiko." },
+            { title: "Intellectual Property", desc: "Perlindungan aset kekayaan intelektual, paten, merek dagang, dan hak cipta komersial." },
+            { title: "Corporate, Commercial & Compliance", desc: "Layanan korporasi komprehensif, aksi korporasi, merger & akuisisi, serta kepatuhan regulasi." },
+            { title: "Retainer & General Counsel Services", desc: "Pendampingan hukum harian berkelanjutan sebagai penasihat hukum internal korporasi." },
+          ].map((item, index) => (
+            <div key={index} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-200 hover:shadow-lg hover:border-gold-metallic transition-all duration-300 flex flex-col justify-between">
+              <div>
+                <h4 className="text-xl font-bold text-navy-deep mb-3">{item.title}</h4>
+                <p className="text-charcoal/80 leading-relaxed text-sm mb-6">{item.desc}</p>
+              </div>
+              <Link href="/layanan" className="text-gold-metallic font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all">
+                Pelajari Lebih Lanjut <span>→</span>
+              </Link>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* 6. SECTION LEGAL PLATFORMS (EKOSISTEM DIGITAL SIP) */}
+      <section className="py-24 bg-navy-deep text-white px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-sm text-gold-metallic font-bold tracking-widest uppercase mb-2">Area Praktik</h2>
-            <h3 className="text-3xl md:text-4xl font-bold text-navy-deep">Fokus Layanan Hukum Kami</h3>
+            <h2 className="text-sm text-gold-metallic font-bold tracking-widest uppercase mb-2">Inovasi Teknologi Hukum</h2>
+            <h3 className="text-3xl md:text-4xl font-bold mb-4">Ekosistem Digital Bhadrika Byakta</h3>
+            <p className="text-gray-300 max-w-2xl mx-auto">Platform digital terintegrasi yang kami kembangkan untuk mendukung efisiensi riset dan kepatuhan hukum klien.</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { name: "SIP-R Consultant", desc: "Konsultan digital khusus Kekayaan Intelektual, Kepatuhan, & Perizinan." },
+              { name: "Regulasip", desc: "Database peraturan terlengkap & perangkat riset hukum digital mutakhir." },
+              { name: "SIP Library", desc: "Perpustakaan literatur dan dokumentasi hukum digital eksklusif." },
+              { name: "Published Books", desc: "Koleksi publikasi buku-buku hukum karya para partner firma." },
+            ].map((plat, i) => (
+              <div key={i} className="bg-navy p-6 rounded-xl border border-white/10 hover:border-gold-metallic/40 transition">
+                <h4 className="text-gold-soft font-bold text-lg mb-2">{plat.name}</h4>
+                <p className="text-gray-400 text-sm leading-relaxed">{plat.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 7. SECTION LEADERSHIP / FOUNDING PARTNERS */}
+      <section className="py-24 px-6 bg-white border-b border-gray-200">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+          <div className="w-full md:w-1/3">
+            <div className="w-full h-[400px] bg-off-white rounded-xl border-4 border-gray-100 shadow-lg flex items-center justify-center relative overflow-hidden">
+              <span className="text-gray-400 text-sm font-medium text-center px-4">[Foto Dr. Safitri Hariyani Saptogino, S.H., M.H.]</span>
+            </div>
+          </div>
+          <div className="w-full md:w-2/3">
+            <h2 className="text-sm text-gold-metallic font-bold tracking-widest uppercase mb-2">Leadership & Founding Partners</h2>
+            <h3 className="text-3xl font-bold text-navy-deep mb-2">Dr. Safitri Hariyani Saptogino, S.H., M.H.</h3>
+            <p className="text-gold-metallic font-semibold mb-6">Managing Partner & Senior Legal Expert</p>
+            <p className="text-charcoal/80 leading-relaxed mb-6">
+              Berpengalaman luas dalam penanganan hukum korporasi, kepatuhan, serta arbitrase komersial tingkat nasional dan internasional. Beliau aktif memimpin berbagai penyelesaian sengketa bernilai strategis tinggi serta penulisan karya ilmiah hukum di Indonesia.
+            </p>
+            <Link href="/tentang" className="text-navy-deep font-bold border-b-2 border-gold-metallic pb-1 hover:text-gold-metallic transition">
+              Baca Profil Selengkapnya →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 8. BANNER SUSTAINABILITY / #ECOLAWFIRM */}
+      <section className="py-20 bg-gradient-to-r from-navy to-navy-deep text-white px-6">
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+          <div>
+            <span className="inline-block bg-emerald-500/20 text-emerald-300 px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase mb-3">#EcoLawFirm</span>
+            <h3 className="text-3xl font-bold mb-3">Pionir Eco Law Firm di Indonesia</h3>
+            <p className="text-gray-300 max-w-xl text-sm leading-relaxed">
+              Kami mengintegrasikan prinsip keberlanjutan lingkungan dalam setiap operasional kantor dan layanan hukum korporasi berbasis hijau. Unduh laporan keberlanjutan terbaru kami.
+            </p>
+          </div>
+          <Link href="/sustainability" className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-8 rounded-lg text-sm transition shadow-md flex-shrink-0">
+            Sustainability Report 2026
+          </Link>
+        </div>
+      </section>
+
+      {/* 9. GLOBAL PARTNERSHIPS / IN COLLABORATION WITH */}
+      <section className="py-20 px-6 bg-white">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-sm text-gold-metallic font-bold tracking-widest uppercase mb-12">Global Partnerships & Affiliations</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-70">
+            <div className="p-4 font-bold tracking-wider text-navy-deep text-lg border border-gray-200 rounded-lg">Aura Partners Singapore</div>
+            <div className="p-4 font-bold tracking-wider text-navy-deep text-lg border border-gray-200 rounded-lg">Donaldson & Burkinshaw LLP</div>
+            <div className="p-4 font-bold tracking-wider text-navy-deep text-lg border border-gray-200 rounded-lg">TAHOTA China</div>
+            <div className="p-4 font-bold tracking-wider text-navy-deep text-lg border border-gray-200 rounded-lg">International Bar Association</div>
+          </div>
+        </div>
+      </section>
+
+      {/* 10. FEATURED INSIGHTS & MEDIA */}
+      <section className="py-24 px-6 bg-off-white border-t border-gray-200">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-sm text-gold-metallic font-bold tracking-widest uppercase mb-2">Publikasi & Media</h2>
+            <h3 className="text-3xl md:text-4xl font-bold text-navy-deep">Featured Insights & Media</h3>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { title: "Sengketa Bisnis", desc: "Menyelesaikan konflik pemegang saham dan pelanggaran kontrak dengan berorientasi pada win-win solution.", icon: "M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" },
-              { title: "Hukum Perusahaan", desc: "Pendampingan legalitas, proses merger & akuisisi, serta kepatuhan regulasi (compliance) operasional bisnis.", icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" },
-              { title: "Keluarga & Waris", desc: "Penanganan litigasi hak asuh anak, perceraian, dan pembagian harta warisan secara rahasia dan empatik.", icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" }
-            ].map((item, index) => (
-              <div key={index} className="group bg-white p-10 rounded-2xl shadow-md border border-gray-200 hover:shadow-xl hover:border-gold-metallic/50 transition-all duration-300">
-                <div className="w-14 h-14 bg-off-white rounded-lg flex items-center justify-center mb-6 group-hover:bg-gold-metallic transition-colors duration-300 border border-gray-100 group-hover:border-gold-metallic">
-                  <svg className="w-7 h-7 text-navy-deep group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
-                    <path strokeLinecap="round" strokeLinejoin="round" d={item.icon} />
-                  </svg>
+              { category: "Artikel Hukum", title: "Dinamika Regulasi Investasi Asing Terbaru di Indonesia", date: "Agustus 2026" },
+              { category: "Podcast Legal", title: "Mengatasi Sengketa Kontrak Bisnis di Era Digital", date: "Juli 2026" },
+              { category: "Whitepaper", title: "Kepatuhan UU PDP dan Implikasinya bagi Korporasi", date: "Juni 2026" },
+            ].map((insight, idx) => (
+              <div key={idx} className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm flex flex-col justify-between">
+                <div>
+                  <span className="text-xs font-bold text-gold-metallic uppercase tracking-wider">{insight.category}</span>
+                  <h4 className="text-lg font-bold text-navy-deep my-3">{insight.title}</h4>
+                  <p className="text-xs text-gray-400">{insight.date}</p>
                 </div>
-                <h3 className="text-2xl font-bold text-navy-deep mb-4">{item.title}</h3>
-                <p className="text-charcoal/80 leading-relaxed mb-6">{item.desc}</p>
-                <Link href="/kontak" className="text-gold-metallic font-bold flex items-center gap-2 group-hover:gap-3 transition-all">
-                  Pelajari Lebih Lanjut <span>→</span>
+                <Link href="/insights" className="mt-6 text-sm font-semibold text-navy-deep hover:text-gold-metallic transition">
+                  Baca Selengkapnya →
                 </Link>
               </div>
             ))}
@@ -85,160 +221,45 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* 4. OUR TEAM (Tentang) */}
-      <section className="py-24 bg-white px-6 border-y border-gray-200">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16">
-          <div className="w-full md:w-1/2 relative">
-            {/* Bingkai Emas Dibelakang Foto */}
-            <div className="absolute inset-0 bg-gold-metallic translate-x-4 translate-y-4 rounded-xl -z-10"></div>
-            <div className="w-full h-[500px] bg-off-white rounded-xl flex flex-col items-center justify-center overflow-hidden border-4 border-white shadow-xl relative">
-              <span className="text-gray-400 font-medium z-10">[Pasang Foto Eksekutif Jas Berwarna Navy/Hitam]</span>
-              <div className="absolute inset-0 bg-[radial-gradient(#d1d5db_1px,transparent_1px)] [background-size:16px_16px] opacity-30"></div>
-            </div>
-          </div>
-          <div className="w-full md:w-1/2">
-            <h2 className="text-sm text-gold-metallic font-bold tracking-widest uppercase mb-2">Profil Pendiri</h2>
-            <h3 className="text-3xl md:text-4xl font-bold text-navy-deep mb-6">Dipimpin oleh Praktisi Hukum Berpengalaman</h3>
-            
-            <p className="text-charcoal/80 leading-relaxed mb-8 text-lg">
-              Bpk. R. Nusantara, S.H., M.H., memiliki lebih dari 15 tahun jam terbang tinggi di pengadilan maupun meja mediasi. Berspesialisasi dalam hukum korporasi dan sengketa aset bernilai miliaran rupiah.
-            </p>
-
-            <blockquote className="relative p-6 bg-off-white border-l-4 border-gold-metallic rounded-r-lg mb-8">
-              <svg className="w-8 h-8 text-gold-metallic/20 absolute top-2 left-2" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-              </svg>
-              <p className="relative z-10 italic text-navy-deep font-medium text-lg ml-4">
-                "Kemenangan sejati tidak selalu dicapai di ruang sidang, melainkan melalui negosiasi cerdas, kerahasiaan absolut, dan strategi matang."
-              </p>
-            </blockquote>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. TESTIMONIALS */}
-      <section className="py-24 bg-navy-deep px-6">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-sm text-gold-metallic font-bold tracking-widest uppercase mb-2">Testimoni Klien</h2>
-          <h3 className="text-3xl md:text-4xl font-bold text-white mb-16">Rekam Jejak Kepercayaan</h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-left">
-            {[
-              { quote: "Firma Hukum Nusantara menyelamatkan perusahaan kami dari gugatan sengketa kontrak bernilai besar. Analisis mitigasi risikonya luar biasa tajam.", name: "Bpk. Budi Santoso", role: "CEO Perusahaan Manufaktur" },
-              { quote: "Kasus waris keluarga kami yang kompleks berhasil ditengahi dengan elegan dan damai berkat pendekatan profesional dari para partner di firma ini.", name: "Ibu Siti Aisyah", role: "Klien Privat" }
-            ].map((testi, i) => (
-              <div key={i} className="bg-navy p-10 rounded-xl relative border border-white/5 hover:border-gold-metallic/30 transition-colors">
-                <div className="flex gap-1 mb-6">
-                  {[...Array(5)].map((_, index) => (
-                    <svg key={index} className="w-5 h-5 text-gold-metallic" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-                <p className="text-gray-300 italic mb-8 text-lg leading-relaxed">"{testi.quote}"</p>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-gray-600 rounded-full flex-shrink-0"></div>
-                  <div>
-                    <h4 className="text-gold-soft font-bold">{testi.name}</h4>
-                    <p className="text-gray-400 text-sm uppercase tracking-wide">{testi.role}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 6. CONTACT SECTION */}
-      <section className="py-24 px-6">
-        <div className="max-w-6xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200 flex flex-col lg:flex-row">
-          
-          <div className="w-full lg:w-2/5 bg-navy-deep text-white p-12 flex flex-col justify-between relative overflow-hidden">
-            {/* Ornamen Abstrak */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-gold-metallic rounded-full blur-3xl opacity-20 translate-x-1/2 -translate-y-1/2"></div>
-            
-            <div className="relative z-10">
-              <h2 className="text-3xl font-bold mb-4">Mari Evaluasi Posisi Hukum Anda</h2>
-              <p className="text-gray-300 mb-12">Berikan rincian singkat, dan tim kami akan segera menghubungi Anda. Kerahasiaan 100% dilindungi asas *Attorney-Client Privilege*.</p>
-              
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-white/10 border border-white/20 rounded-full flex items-center justify-center flex-shrink-0">
-                    <svg className="w-5 h-5 text-gold-metallic" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gold-metallic tracking-wide uppercase text-sm mb-1">Kantor Pusat</h4>
-                    <p className="text-gray-300 text-sm">Gedung Sudirman Tower, Lt. 15<br/>Jl. Jend. Sudirman, Jakarta</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-white/10 border border-white/20 rounded-full flex items-center justify-center flex-shrink-0">
-                    <svg className="w-5 h-5 text-gold-metallic" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gold-metallic tracking-wide uppercase text-sm mb-1">Korespondensi</h4>
-                    <p className="text-gray-300 text-sm">legal@nusantarapartners.com<br/>+62 (21) 812-3456</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="w-full lg:w-3/5 p-12">
-            <h3 className="text-2xl font-bold text-navy-deep mb-6">Formulir Evaluasi Kasus</h3>
-            <form className="space-y-5">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                <div>
-                  <label className="block text-sm font-bold text-charcoal mb-1">Nama / Instansi</label>
-                  <input type="text" className="w-full px-4 py-3 bg-off-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-metallic focus:bg-white transition" placeholder="Nama Lengkap / Perusahaan" required />
-                </div>
-                <div>
-                  <label className="block text-sm font-bold text-charcoal mb-1">Nomor Telepon</label>
-                  <input type="tel" className="w-full px-4 py-3 bg-off-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-metallic focus:bg-white transition" placeholder="Cth: 0812-xxxx-xxxx" required />
-                </div>
-              </div>
-              <div>
-                <label className="block text-sm font-bold text-charcoal mb-1">Kategori Layanan</label>
-                <select className="w-full px-4 py-3 bg-off-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-metallic focus:bg-white transition">
-                  <option value="">-- Pilih Jenis Perkara --</option>
-                  <option value="bisnis">Litigasi Bisnis & Komersial</option>
-                  <option value="perusahaan">Corporate & Legal Draft</option>
-                  <option value="keluarga">Hukum Keluarga Privat</option>
-                  <option value="lainnya">Lainnya / Belum Yakin</option>
-                </select>
-              </div>
-              <div>
-                <label className="block text-sm font-bold text-charcoal mb-1">Uraian Singkat Perkara</label>
-                <textarea rows={4} className="w-full px-4 py-3 bg-off-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-metallic focus:bg-white transition resize-none" placeholder="Tuliskan secara garis besar persoalan hukum Anda (Tanpa menulis data sensitif)..."></textarea>
-              </div>
-              <button type="submit" className="w-full bg-navy-deep text-gold-metallic font-bold py-4 rounded-lg text-lg hover:bg-[#13233A] hover:text-gold-soft border border-navy-deep transition-all duration-300 mt-2 shadow-md">
-                Kirim & Jadwalkan Konsultasi
-              </button>
+      {/* 11. CTA / HUBUNGI KAMI & NEWSLETTER */}
+      <section className="py-24 bg-navy-deep text-white px-6">
+        <div className="max-w-5xl mx-auto bg-navy p-10 rounded-2xl border border-gold-metallic/30 flex flex-col lg:flex-row items-center justify-between gap-10">
+          <div className="w-full lg:w-1/2">
+            <h3 className="text-2xl font-bold mb-3">Diskusikan Kebutuhan Hukum Anda</h3>
+            <p className="text-gray-300 text-sm mb-6">Berlangganan newsletter bulanan kami untuk mendapatkan update regulasi hukum terbaru langsung di email Anda.</p>
+            <form className="flex gap-2">
+              <input type="email" placeholder="Alamat Email Anda" className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-gold-metallic flex-grow" required />
+              <button type="submit" className="bg-gold-metallic text-navy-deep font-bold px-5 py-3 rounded-lg text-sm hover:bg-gold-soft transition">Subscribe</button>
             </form>
           </div>
-
+          <div className="w-full lg:w-auto text-center lg:text-right border-t lg:border-t-0 lg:border-l border-white/10 pt-8 lg:pt-0 lg:pl-10">
+            <h4 className="font-bold text-gold-soft mb-2">Terhubung dengan Kami</h4>
+            <p className="text-gray-300 text-sm mb-4">Ikuti profil profesional kami di LinkedIn untuk informasi karier dan wawasan hukum.</p>
+            <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="inline-block bg-transparent border border-gold-metallic text-gold-metallic hover:bg-gold-metallic hover:text-navy-deep px-6 py-2 rounded-lg text-sm font-bold transition">
+              Kunjungi LinkedIn Resmi
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* 9. FOOTER */}
+      {/* 12. FOOTER */}
       <footer className="bg-[#08101E] pt-16 pb-8 px-6 border-t border-gold-metallic/20">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
           <div className="md:col-span-2">
             <Link href="/" className="text-2xl font-bold text-white tracking-wide mb-4 block">
-              Nusantara <span className="text-gold-metallic">& Partners</span>
+              Bhadrika Byakta <span className="text-gold-metallic">Law Firm</span>
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
-              Firma hukum kelas atas yang berdedikasi memberikan solusi perlindungan aset dan penyelesaian sengketa dengan standar kerahasiaan dan profesionalisme internasional.
+              Firma hukum premium dan profesional di Indonesia yang berdedikasi memberikan solusi perlindungan hukum komprehensif dan penyelesaian sengketa berbasis standar internasional.
             </p>
           </div>
           <div>
             <h4 className="text-white font-bold mb-4 uppercase tracking-widest text-sm">Navigasi</h4>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li><Link href="/layanan" className="hover:text-gold-metallic transition">Area Praktik</Link></li>
-              <li><Link href="/tentang" className="hover:text-gold-metallic transition">Profil Advokat</Link></li>
-              <li><Link href="/testimoni" className="hover:text-gold-metallic transition">Klien Kami</Link></li>
-              <li><Link href="/kontak" className="hover:text-gold-metallic transition">Kontak & Lokasi</Link></li>
+              <li><Link href="/layanan" className="hover:text-gold-metallic transition">Legal Services</Link></li>
+              <li><Link href="/tentang" className="hover:text-gold-metallic transition">Our Lawyers</Link></li>
+              <li><Link href="/awards" className="hover:text-gold-metallic transition">Awards & Recognitions</Link></li>
+              <li><Link href="/kontak" className="hover:text-gold-metallic transition">Contact Us</Link></li>
             </ul>
           </div>
           <div>
@@ -251,7 +272,7 @@ export default function LandingPage() {
           </div>
         </div>
         <div className="max-w-6xl mx-auto text-center border-t border-white/10 pt-8 text-gray-500 text-sm">
-          &copy; {new Date().getFullYear()} Firma Hukum Nusantara & Partners. Seluruh hak cipta dilindungi undang-undang.
+          &copy; {new Date().getFullYear()} Bhadrika Byakta Law Firm. Seluruh hak cipta dilindungi undang-undang.
         </div>
       </footer>
 
